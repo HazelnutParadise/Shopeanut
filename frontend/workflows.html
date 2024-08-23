@@ -1,159 +1,183 @@
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
-		<script type="text/javascript">
-			window.tailwind.config = {
-				darkMode: ['class'],
-				theme: {
-					extend: {
-						colors: {
-							border: 'hsl(var(--border))',
-							input: 'hsl(var(--input))',
-							ring: 'hsl(var(--ring))',
-							background: 'hsl(var(--background))',
-							foreground: 'hsl(var(--foreground))',
-							primary: {
-								DEFAULT: 'hsl(var(--primary))',
-								foreground: 'hsl(var(--primary-foreground))'
-							},
-							secondary: {
-								DEFAULT: 'hsl(var(--secondary))',
-								foreground: 'hsl(var(--secondary-foreground))'
-							},
-							destructive: {
-								DEFAULT: 'hsl(var(--destructive))',
-								foreground: 'hsl(var(--destructive-foreground))'
-							},
-							muted: {
-								DEFAULT: 'hsl(var(--muted))',
-								foreground: 'hsl(var(--muted-foreground))'
-							},
-							accent: {
-								DEFAULT: 'hsl(var(--accent))',
-								foreground: 'hsl(var(--accent-foreground))'
-							},
-							popover: {
-								DEFAULT: 'hsl(var(--popover))',
-								foreground: 'hsl(var(--popover-foreground))'
-							},
-							card: {
-								DEFAULT: 'hsl(var(--card))',
-								foreground: 'hsl(var(--card-foreground))'
-							},
-						},
-					}
-				}
-			}
-		</script>
-		<style type="text/tailwindcss">
-			@layer base {
-				:root {
-					--background: 0 0% 100%;
---foreground: 20 14.3% 4.1%;
---card: 0 0% 100%;
---card-foreground: 20 14.3% 4.1%;
---popover: 0 0% 100%;
---popover-foreground: 20 14.3% 4.1%;
---primary: 24.6 95% 53.1%;
---primary-foreground: 60 9.1% 97.8%;
---secondary: 60 4.8% 95.9%;
---secondary-foreground: 24 9.8% 10%;
---muted: 60 4.8% 95.9%;
---muted-foreground: 25 5.3% 44.7%;
---accent: 60 4.8% 95.9%;
---accent-foreground: 24 9.8% 10%;
---destructive: 0 84.2% 60.2%;
---destructive-foreground: 60 9.1% 97.8%;
---border: 20 5.9% 90%;
---input: 20 5.9% 90%;
---ring: 24.6 95% 53.1%;
---radius: 0.95rem;
-				}
-				.dark {
-					--background: 20 14.3% 4.1%;
---foreground: 60 9.1% 97.8%;
---card: 20 14.3% 4.1%;
---card-foreground: 60 9.1% 97.8%;
---popover: 20 14.3% 4.1%;
---popover-foreground: 60 9.1% 97.8%;
---primary: 20.5 90.2% 48.2%;
---primary-foreground: 60 9.1% 97.8%;
---secondary: 12 6.5% 15.1%;
---secondary-foreground: 60 9.1% 97.8%;
---muted: 12 6.5% 15.1%;
---muted-foreground: 24 5.4% 63.9%;
---accent: 12 6.5% 15.1%;
---accent-foreground: 60 9.1% 97.8%;
---destructive: 0 72.2% 50.6%;
---destructive-foreground: 60 9.1% 97.8%;
---border: 12 6.5% 15.1%;
---input: 12 6.5% 15.1%;
---ring: 20.5 90.2% 48.2%;
-				}
-			}
-		</style>
+    <script
+      src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js"
+      defer
+      init
+    ></script>
+    <script type="text/javascript">
+      window.tailwind.config = {
+        darkMode: ["class"],
+        theme: {
+          extend: {
+            colors: {
+              border: "hsl(var(--border))",
+              input: "hsl(var(--input))",
+              ring: "hsl(var(--ring))",
+              background: "hsl(var(--background))",
+              foreground: "hsl(var(--foreground))",
+              primary: {
+                DEFAULT: "hsl(var(--primary))",
+                foreground: "hsl(var(--primary-foreground))",
+              },
+              secondary: {
+                DEFAULT: "hsl(var(--secondary))",
+                foreground: "hsl(var(--secondary-foreground))",
+              },
+              destructive: {
+                DEFAULT: "hsl(var(--destructive))",
+                foreground: "hsl(var(--destructive-foreground))",
+              },
+              muted: {
+                DEFAULT: "hsl(var(--muted))",
+                foreground: "hsl(var(--muted-foreground))",
+              },
+              accent: {
+                DEFAULT: "hsl(var(--accent))",
+                foreground: "hsl(var(--accent-foreground))",
+              },
+              popover: {
+                DEFAULT: "hsl(var(--popover))",
+                foreground: "hsl(var(--popover-foreground))",
+              },
+              card: {
+                DEFAULT: "hsl(var(--card))",
+                foreground: "hsl(var(--card-foreground))",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        :root {
+          --background: 0 0% 100%;
+          --foreground: 20 14.3% 4.1%;
+          --card: 0 0% 100%;
+          --card-foreground: 20 14.3% 4.1%;
+          --popover: 0 0% 100%;
+          --popover-foreground: 20 14.3% 4.1%;
+          --primary: 24.6 95% 53.1%;
+          --primary-foreground: 60 9.1% 97.8%;
+          --secondary: 60 4.8% 95.9%;
+          --secondary-foreground: 24 9.8% 10%;
+          --muted: 60 4.8% 95.9%;
+          --muted-foreground: 25 5.3% 44.7%;
+          --accent: 60 4.8% 95.9%;
+          --accent-foreground: 24 9.8% 10%;
+          --destructive: 0 84.2% 60.2%;
+          --destructive-foreground: 60 9.1% 97.8%;
+          --border: 20 5.9% 90%;
+          --input: 20 5.9% 90%;
+          --ring: 24.6 95% 53.1%;
+          --radius: 0.95rem;
+        }
+        .dark {
+          --background: 20 14.3% 4.1%;
+          --foreground: 60 9.1% 97.8%;
+          --card: 20 14.3% 4.1%;
+          --card-foreground: 60 9.1% 97.8%;
+          --popover: 20 14.3% 4.1%;
+          --popover-foreground: 60 9.1% 97.8%;
+          --primary: 20.5 90.2% 48.2%;
+          --primary-foreground: 60 9.1% 97.8%;
+          --secondary: 12 6.5% 15.1%;
+          --secondary-foreground: 60 9.1% 97.8%;
+          --muted: 12 6.5% 15.1%;
+          --muted-foreground: 24 5.4% 63.9%;
+          --accent: 12 6.5% 15.1%;
+          --accent-foreground: 60 9.1% 97.8%;
+          --destructive: 0 72.2% 50.6%;
+          --destructive-foreground: 60 9.1% 97.8%;
+          --border: 12 6.5% 15.1%;
+          --input: 12 6.5% 15.1%;
+          --ring: 20.5 90.2% 48.2%;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="min-h-screen bg-background text-foreground p-4">
-  <div class="max-w-4xl mx-auto">
-    <h1 class="text-3xl font-bold mb-4">Workflow Management</h1>
-    <div class="mb-4">
-      <button class="bg-primary text-primary-foreground px-4 py-2 rounded hover:bg-primary/80" id="addWorkflowBtn">Add Workflow</button>
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-4">工作流</h1>
+        <div class="mb-4">
+          <button
+            class="bg-primary text-primary-foreground px-4 py-2 rounded hover:bg-primary/80"
+            id="addWorkflowBtn"
+          >
+            新增工作流
+          </button>
+        </div>
+        <div class="bg-card p-4 rounded shadow">
+          <h2 class="text-xl font-semibold mb-2">現有的工作流</h2>
+          <ul id="workflowList" class="space-y-2"></ul>
+        </div>
+      </div>
     </div>
-    <div class="bg-card p-4 rounded shadow">
-      <h2 class="text-xl font-semibold mb-2">Existing Workflows</h2>
-      <ul id="workflowList" class="space-y-2">
-      </ul>
-    </div>
-  </div>
-</div>
 
-<template id="workflowItemTemplate">
-  <li class="flex justify-between items-center bg-secondary text-secondary-foreground p-2 rounded shadow">
-    <span class="workflow-name"></span>
-    <div class="space-x-2">
-      <button class="edit-btn bg-accent text-accent-foreground px-2 py-1 rounded hover:bg-accent/80">Edit</button>
-      <button class="delete-btn bg-destructive text-destructive-foreground px-2 py-1 rounded hover:bg-destructive/80">Delete</button>
-    </div>
-  </li>
-</template>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const addWorkflowBtn = document.getElementById('addWorkflowBtn');
-    const workflowList = document.getElementById('workflowList');
-    const workflowItemTemplate = document.getElementById('workflowItemTemplate').content;
-    const existingWorkflows = ['Workflow 1', 'Workflow 2', 'Workflow 3'];
-    existingWorkflows.forEach(workflow => addWorkflowItem(workflow));
-    addWorkflowBtn.addEventListener('click', () => {
-      const workflowName = prompt('Enter workflow name:');
-      if (workflowName) {
-        addWorkflowItem(workflowName);
-      }
-    });
-    function addWorkflowItem(name) {
-      const newItem = workflowItemTemplate.cloneNode(true);
-      newItem.querySelector('.workflow-name').textContent = name;
-      newItem.querySelector('.edit-btn').addEventListener('click', () => editWorkflowItem(newItem, name));
-      newItem.querySelector('.delete-btn').addEventListener('click', () => deleteWorkflowItem(newItem));
-      workflowList.appendChild(newItem);
-    }
-    function editWorkflowItem(item, oldName) {
-      const newName = prompt('Edit workflow name:', oldName);
-      if (newName) {
-        item.querySelector('.workflow-name').textContent = newName;
-      }
-    }
-    function deleteWorkflowItem(item) {
-      if (confirm('Are you sure you want to delete this workflow?')) {
-        item.remove();
-      }
-    }
-  });
-</script>
-
-
+    <template id="workflowItemTemplate">
+      <li>
+        <a
+          class="flex justify-between items-center bg-secondary text-secondary-foreground p-2 rounded shadow hover:bg-red-100"
+        >
+          <span class="workflow-name"></span>
+          <div class="space-x-2">
+            <button
+              class="edit-btn bg-orange-300 text-accent-foreground px-2 py-1 rounded hover:bg-orange-300/80"
+            >
+              變更名稱
+            </button>
+            <button
+              class="delete-btn bg-destructive text-destructive-foreground px-2 py-1 rounded hover:bg-destructive/80"
+            >
+              刪除
+            </button>
+          </div>
+        </a>
+      </li>
+    </template>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const addWorkflowBtn = document.getElementById("addWorkflowBtn");
+        const workflowList = document.getElementById("workflowList");
+        const workflowItemTemplate = document.getElementById(
+          "workflowItemTemplate"
+        ).content;
+        const existingWorkflows = ["Workflow 1", "Workflow 2", "Workflow 3"];
+        existingWorkflows.forEach((workflow) => addWorkflowItem(workflow));
+        addWorkflowBtn.addEventListener("click", () => {
+          const workflowName = prompt("Enter workflow name:");
+          if (workflowName) {
+            addWorkflowItem(workflowName);
+          }
+        });
+        function addWorkflowItem(name) {
+          const newItem = workflowItemTemplate.cloneNode(true);
+          newItem.querySelector(".workflow-name").textContent = name;
+          newItem
+            .querySelector(".edit-btn")
+            .addEventListener("click", () => editWorkflowItem(newItem, name));
+          newItem
+            .querySelector(".delete-btn")
+            .addEventListener("click", () => deleteWorkflowItem(newItem));
+          workflowList.appendChild(newItem);
+        }
+        function editWorkflowItem(item, oldName) {
+          const newName = prompt("Edit workflow name:", oldName);
+          if (newName) {
+            item.querySelector(".workflow-name").textContent = newName;
+          }
+        }
+        function deleteWorkflowItem(item) {
+          if (confirm("Are you sure you want to delete this workflow?")) {
+            item.remove();
+          }
+        }
+      });
+    </script>
   </body>
 </html>
